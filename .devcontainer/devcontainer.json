@@ -9,9 +9,10 @@
       "installZsh": true,
       "configureZshAsDefaultShell": true,
       "upgradePackages": true
-    }
+    },
+    "ghcr.io/devcontainers/features/node:1": {}
   },
-  "customizations": {
+"customizations": {
     "vscode": {
       "extensions": [
         "ms-azuretools.vscode-docker",
