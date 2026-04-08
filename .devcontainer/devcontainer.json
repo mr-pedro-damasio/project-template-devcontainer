@@ -1,5 +1,6 @@
 {
-  "name": "project-template-devcontainer",
+  "name": "${localWorkspaceFolderBasename}-dev",
+  "runArgs": ["--name", "${localWorkspaceFolderBasename}-dev"],
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."

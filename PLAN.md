@@ -1,5 +1,7 @@
 # PLAN
 
+> *Template Note: Clear out Milestone 1 once you have customized your repository, and use the remaining milestones to bootstrap your specific application.*
+
 Living implementation plan for this repository.
 
 ## Status key
@@ -15,19 +17,15 @@ Living implementation plan for this repository.
 - [x] Agent governance files scaffolded.
 - [x] Starter folder structure scaffolded.
 
-## Milestone 2: Project bootstrap (customize per stack)
+## Milestone 2: Project definition and scope
 
-- [ ] Define runtime and package manager.
-- [ ] Add source entrypoint in `src/`.
-- [ ] Add initial tests in `tests/`.
-- [ ] Add CI workflow in `.github/workflows/`.
-
-## Milestone 3: Team enablement
-
-- [ ] Document architecture in `docs/architecture/`.
-- [ ] Add operational runbooks in `docs/runbooks/`.
-- [ ] Add local helper scripts in `scripts/`.
+- [ ] Define project goal, target users, and non-goals.
+- [ ] Choose primary stack and architecture direction.
+- [ ] Create a short project-definition doc in `docs/architecture/`.
+- [ ] Define MVP scope and explicitly defer non-MVP features.
+- [ ] Capture open questions and assumptions for the next iteration.
 
 ## Notes
 
 - Keep this file updated whenever scope or priorities change.
+- Keep this first iteration focused on definition only (no full implementation).
