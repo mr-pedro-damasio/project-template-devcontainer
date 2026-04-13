@@ -17,13 +17,15 @@ Living implementation plan for this repository.
 - [x] Agent governance files scaffolded.
 - [x] Starter folder structure scaffolded.
 
-## Milestone 2: Project definition and scope
+## Milestone 2: Project initialization and definition
 
-- [ ] Define project goal, target users, and non-goals.
-- [ ] Choose primary stack and architecture direction.
+- [ ] Update project name and description in `README.md`.
+- [ ] Customize `.devcontainer/devcontainer.json` with project-specific languages and extensions.
+- [ ] Define the specific project goal, target users, and non-goals.
+- [ ] Choose the primary stack and update `.devcontainer/Dockerfile` if necessary.
 - [ ] Create a short project-definition doc in `docs/architecture/`.
 - [ ] Define MVP scope and explicitly defer non-MVP features.
-- [ ] Capture open questions and assumptions for the next iteration.
+- [ ] Remove template-specific notes and Milestone 1 from this file.
 
 ## Notes
 

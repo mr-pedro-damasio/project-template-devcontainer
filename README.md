@@ -10,8 +10,8 @@ It gives you a ready-to-use Ubuntu-based development environment with common uti
 - `.devcontainer/Dockerfile`: Base image and OS-level packages.
 - `.devcontainer/postCreateCommand.sh`: One-time setup that runs after container creation.
 - `AGENTS.md`: Agent workflow and contribution guardrails.
-- `CLAUDE.md`: Claude-specific quick start that references `@AGENTS.md` and `PLAN.md`.
-- `PLAN.md`: Living implementation plan/checklist template.
+- `CLAUDE.md`: Claude-specific quick start that references `@AGENTS.md` and `docs/PLAN.md`.
+- `docs/PLAN.md`: Living implementation plan/checklist template.
 
 ## Project scaffolding
 
@@ -24,6 +24,7 @@ This template now includes a practical default structure:
 |-- .vscode/
 |-- config/
 |-- docs/
+|   |-- PLAN.md
 |   |-- architecture/
 |   `-- runbooks/
 |-- scripts/
@@ -31,7 +32,6 @@ This template now includes a practical default structure:
 |-- tests/
 |-- AGENTS.md
 |-- CLAUDE.md
-|-- PLAN.md
 `-- README.md
 ```
 
