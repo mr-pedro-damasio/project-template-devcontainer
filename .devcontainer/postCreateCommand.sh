@@ -5,7 +5,7 @@ set -euo pipefail
 git config --global --add safe.directory "$(pwd)"
 
 # Install Claude Code CLI
-npm install -g @anthropic-ai/claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 
 # Ensure the official Claude plugin marketplace is configured.
 # Ignore "already exists" style errors.
