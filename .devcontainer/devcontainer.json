@@ -5,6 +5,11 @@
     "dockerfile": "Dockerfile",
     "context": ".."
   },
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb",
+    "storage": "16gb"
+  },
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": true,
