@@ -1,6 +1,6 @@
 # project-template-devcontainer
 
-This repository is a minimal project template focused on a reproducible VS Code Dev Container setup.
+This repository is a minimal project template focused on a reproducible setup for both VS Code Dev Containers and GitHub Codespaces.
 
 It gives you a ready-to-use Ubuntu-based development environment with common utilities, Node.js, useful editor extensions, and post-create bootstrapping.
 
@@ -39,6 +39,8 @@ Use this as a starting point and trim/expand to match your stack.
 
 ## Quick start
 
+### Option A: Local Dev Container
+
 1. Open this folder in VS Code.
 2. Run the command: `Dev Containers: Reopen in Container`.
 3. Wait for the build and post-create setup to complete.
@@ -46,6 +48,14 @@ Use this as a starting point and trim/expand to match your stack.
 When setup finishes, the script prints:
 
 `Dev container is ready.`
+
+### Option B: GitHub Codespaces
+
+1. Click **Code** in GitHub and open a new codespace from this repository.
+2. Wait for container creation and post-create setup.
+3. Open the project in the web editor or desktop VS Code.
+
+The same `.devcontainer/devcontainer.json` is used in both modes.
 
 ## Environment details
 
@@ -63,6 +73,39 @@ Dev Container features enabled:
 
 - `common-utils` (with Zsh installed and configured as default shell, package upgrades enabled)
 - `node` (Node.js tooling)
+
+The dev container declares baseline host requirements:
+
+- `cpus`: `2`
+- `memory`: `4gb`
+- `storage`: `16gb`
+
+These values are guidance for compatible hosts and help define a sensible baseline for Codespaces sizing.
+
+## Configuration ownership (in-repo vs GitHub settings)
+
+Use this table to know where each control lives.
+
+| Area | Controlled in repository | Controlled in GitHub settings |
+|---|---|---|
+| Container image, features, bootstrap, users | `.devcontainer/devcontainer.json`, `.devcontainer/Dockerfile`, `.devcontainer/postCreateCommand.sh` | No |
+| Editor recommendations and defaults | `.vscode/extensions.json` and `customizations` in `.devcontainer/devcontainer.json` | No |
+| CI checks and automation | `.github/workflows/*.yml` | Actions permissions/policies |
+| Secrets used by code or workflows | Referenced in code/workflows | Repository or organization secrets |
+| Codespaces machine type and retention | No | Codespaces settings |
+| Codespaces prebuilds | No | Codespaces prebuild configuration |
+
+## Codespaces settings checklist (outside repository files)
+
+Apply these settings in GitHub after creating a repository from this template:
+
+1. Enable Codespaces for the repository.
+2. Set a default machine type that matches expected project size.
+3. Configure idle timeout and retention period.
+4. Configure prebuilds for the main branch (and key feature branches if needed).
+5. Add required repository or organization secrets.
+
+For a copy-paste runbook, see `docs/runbooks/codespaces-setup.md`.
 
 ## VS Code customization included
 
@@ -116,6 +159,8 @@ Tips:
   - `Dev Containers: Rebuild Container`
 - If post-create setup fails, inspect terminal output and rerun manually:
   - `bash .devcontainer/postCreateCommand.sh`
+
+For Codespaces-specific checks, see `docs/runbooks/codespaces-setup.md`.
 
 ## Template intent
 
