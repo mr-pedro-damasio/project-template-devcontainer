@@ -112,7 +112,6 @@ For a copy-paste runbook, see `docs/runbooks/codespaces-setup.md`.
 The template auto-installs these extensions in the container:
 
 - `ms-azuretools.vscode-docker`
-- `eamodio.gitlens`
 - `esbenp.prettier-vscode`
 - `google.geminicodeassist`
 - `anthropic.claude-code`
