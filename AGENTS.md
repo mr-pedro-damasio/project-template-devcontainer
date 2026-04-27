@@ -23,7 +23,6 @@ This file defines the shared operating model for coding agents working in this r
 - `docs/PLAN.md`: Current plan, milestones, and progress tracking.
 
 ## Pull request checklist
-
 - Scope is aligned with `docs/PLAN.md`.
 - New files/folders are documented in `README.md`.
 - Basic verification steps are recorded.
